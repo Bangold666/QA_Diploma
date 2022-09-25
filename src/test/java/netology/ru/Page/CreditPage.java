@@ -1,6 +1,6 @@
-package Page;
+package netology.ru.Page;
 
-import Data.DataHelper;
+import netology.ru.Data.DataHelper;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.Keys;
@@ -21,14 +21,7 @@ public class CreditPage {
     final private static SelenideElement fieldCardOwner = $x("//*[.='Владелец'] //input");
     final private static SelenideElement fieldCardCVC = $x("//*[.='CVC/CVV'] //input");
     final private static SelenideElement buttonContinue = $(".form-field button");
-    final private static SelenideElement fieldWrongFormat = $(byText("Неверный формат"));
-    final private static SelenideElement fieldWrongCardDate = $(byText("Неверно указан срок действия карты"));
-    final private static SelenideElement fieldCardDateExpired = $(byText("Истёк срок действия карты"));
-    final private static SelenideElement fieldRequired = $(byText("Поле обязательно для заполнения"));
-    final private SelenideElement notificationStatusOk = $(".notification_status_ok .notification__content");
-    final private SelenideElement buttonCloseNotificationStatusOk = $(".notification_status_ok button");
-    final private SelenideElement notificationStatusError = $(".notification_status_error .notification__content");
-    final private SelenideElement buttonCloseNotificationStatusError = $(".notification_status_error button");
+
 
     public CreditPage() {
         headingCredit.shouldBe(visible);
@@ -81,23 +74,8 @@ public class CreditPage {
                 .shouldHave(text("Истёк срок действия карты"), Duration.ofSeconds(15));
     }
 
-    public void checkInvalidOwner() {
-        $(".input__sub").shouldBe(visible)
-                .shouldHave(text("Введите имя и фамилию, указанные на карте"), Duration.ofSeconds(15));
-    }
-
-    public void checkEmptyField() {
-        $(".input__sub").shouldBe(visible)
-                .shouldHave(text("Поле обязательно для заполнения"), Duration.ofSeconds(15));
-    }
-
-    public void incorrectOwner() {
-        $(".input__sub").shouldBe(visible)
-                .shouldHave(text("Значение поля может содержать только латинские буквы и дефис"), Duration.ofSeconds(15));
-    }
-
     public void checkAllFieldsAreRequired() {
-        $$(".input__sub").shouldHave(CollectionCondition.size(5))
+        $$(".input__sub").shouldHave(CollectionCondition.size(1))
                 .shouldHave(CollectionCondition.texts("Поле обязательно для заполнения"));
     }
 

@@ -1,6 +1,6 @@
-package Page;
+package netology.ru.Page;
 
-import Data.DataHelper;
+import netology.ru.Data.DataHelper;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
@@ -50,7 +50,7 @@ public class PaymentPage {
 
     public void successfulPaymentDebitCard() {
         $(".notification_status_ok")
-                .shouldHave(text("Успешно Операция одобрена Банком."), Duration.ofSeconds(15)).shouldBe(visible);
+                .shouldBe(Condition.visible, Duration.ofSeconds(20));
     }
 
     public void invalidPaymentDebitCard() {
@@ -72,23 +72,8 @@ public class PaymentPage {
                 .shouldHave(text("Истёк срок действия карты"), Duration.ofSeconds(15));
     }
 
-    public void checkInvalidOwner() {
-        $(".input__sub").shouldBe(visible)
-                .shouldHave(text("Введите имя и фамилию, указанные на карте"), Duration.ofSeconds(15));
-    }
-
-    public void checkEmptyField() {
-        $(".input__sub").shouldBe(visible)
-                .shouldHave(text("Поле обязательно для заполнения"), Duration.ofSeconds(15));
-    }
-
-    public void incorrectOwner() {
-        $(".input__sub").shouldBe(visible)
-                .shouldHave(text("Значение поля может содержать только латинские буквы и дефис"), Duration.ofSeconds(15));
-    }
-
     public void checkAllFieldsAreRequired() {
-        $$(".input__sub").shouldHave(CollectionCondition.size(5))
+        $$(".input__sub").shouldHave(CollectionCondition.size(1))
                 .shouldHave(CollectionCondition.texts("Поле обязательно для заполнения"));
     }
 
