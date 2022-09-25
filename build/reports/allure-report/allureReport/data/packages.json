@@ -1,0 +1,119 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "test",
+    "children" : [ {
+      "name" : "PaymentTest",
+      "children" : [ {
+        "name" : "shouldCreditWithValidCard",
+        "uid" : "36c29a5547ca4e4f",
+        "parentUid" : "2a0b7d36d3b2286df05ebb85007b6e0b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1664037607538,
+          "stop" : 1664037619023,
+          "duration" : 11485
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "shouldNotPayWithRandomCard",
+        "uid" : "c4d416f92ae7d8c1",
+        "parentUid" : "2a0b7d36d3b2286df05ebb85007b6e0b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1664098409023,
+          "stop" : 1664098424231,
+          "duration" : 15208
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 7,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "shouldGetErrorPayNotificationWithRandomCard",
+        "uid" : "e414e3044ad04f6a",
+        "parentUid" : "2a0b7d36d3b2286df05ebb85007b6e0b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1664099241091,
+          "stop" : 1664099244628,
+          "duration" : 3537
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "shouldPayWithValidCard",
+        "uid" : "4f83df93ae007e81",
+        "parentUid" : "2a0b7d36d3b2286df05ebb85007b6e0b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1664099244636,
+          "stop" : 1664099256374,
+          "duration" : 11738
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "shouldNotPayWithInValidCard",
+        "uid" : "eaa5de96aa790eb2",
+        "parentUid" : "2a0b7d36d3b2286df05ebb85007b6e0b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1664099256381,
+          "stop" : 1664099277741,
+          "duration" : 21360
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 4,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2a0b7d36d3b2286df05ebb85007b6e0b"
+    }, {
+      "name" : "CreditTest",
+      "children" : [ {
+        "name" : "shouldCreditWithValidCard",
+        "uid" : "4ebbedd7e540e17b",
+        "parentUid" : "291ff040b9895d697a45d8afe5f44bce",
+        "status" : "failed",
+        "time" : {
+          "start" : 1664099226040,
+          "stop" : 1664099240996,
+          "duration" : 14956
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "291ff040b9895d697a45d8afe5f44bce"
+    } ],
+    "uid" : "d662795e8d349f9b5595bf62f43ea7ae"
+  } ]
+}

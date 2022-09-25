@@ -1,6 +1,7 @@
 package test;
 
 import Data.DataHelper;
+import Page.StartPage;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
@@ -30,5 +31,25 @@ public class CreditTest {
         DataHelper.clearSUTData();
     }
 
+    @Test
+    void shouldCreditWithValidCard() {
+        String[] date = DataHelper.generateDate(30);
+        String month = date[1],
+                year = date[2],
+                owner = DataHelper.generateOwner("En"),
+                cvv = "123";
+
+        var cardInfo = DataHelper.setValidCard(month, year, owner, cvv);
+        var paymentPage = StartPage.paymentOnCredit();
+
+        paymentPage.cleanAllFields();
+        paymentPage.enterCardData(cardInfo);
+
+        paymentPage.successfulPaymentCreditCard();
+
+        String actual = DataHelper.getCreditIdFromOrderEntity();
+        String expected = DataHelper.getIdFromCreditRequestEntity();
+        Assertions.assertEquals(expected, actual);
+    }
 
 }

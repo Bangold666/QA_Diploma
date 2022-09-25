@@ -1,0 +1,118 @@
+{
+  "9b177e11351237011f87db2bbb468a35" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4ebbedd7e540e17b",
+      "status" : "failed",
+      "statusDetails" : "expected: <1b4e4a8b-4cb9-4dbf-bdef-51dda75d3bca> but was: <null>",
+      "time" : {
+        "start" : 1664099226040,
+        "stop" : 1664099240996,
+        "duration" : 14956
+      }
+    } ]
+  },
+  "d8740ccd7bc9946bcedadfc49309cf57" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c4d416f92ae7d8c1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1664098409023,
+        "stop" : 1664098424231,
+        "duration" : 15208
+      }
+    } ]
+  },
+  "81a5d5ec2b49f35b499151d54b828ccd" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "eaa5de96aa790eb2",
+      "status" : "failed",
+      "statusDetails" : "Element should be visible {.notification_status_error}\r\nElement: '<div class=\"notification notification_status_error notification_has-closer notification_stick-to_right notification_theme_alfa-on-white\" displayed:false></div>'\r\nActual value: hidden\r\nScreenshot: file:/G:/Qa-Diplom/build/reports/tests/1664099277486.0.png\r\nPage source: file:/G:/Qa-Diplom/build/reports/tests/1664099277486.0.html\r\nTimeout: 20 s.",
+      "time" : {
+        "start" : 1664099256381,
+        "stop" : 1664099277741,
+        "duration" : 21360
+      }
+    } ]
+  },
+  "f192cb6abe5740a8616e771c4dbed09d" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4f83df93ae007e81",
+      "status" : "passed",
+      "time" : {
+        "start" : 1664099244636,
+        "stop" : 1664099256374,
+        "duration" : 11738
+      }
+    } ]
+  },
+  "ea7321fbcc20829fe78534c8f55cf37" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "36c29a5547ca4e4f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1664037607538,
+        "stop" : 1664037619023,
+        "duration" : 11485
+      }
+    } ]
+  },
+  "afa8bbaf0e67013b77bcff6e02dfc291" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e414e3044ad04f6a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1664099241091,
+        "stop" : 1664099244628,
+        "duration" : 3537
+      }
+    } ]
+  }
+}

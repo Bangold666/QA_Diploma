@@ -1,6 +1,5 @@
 package Page;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.exactText;
@@ -9,20 +8,20 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class StartPage {
-    private SelenideElement headingStart = $("h2.heading");
-    private SelenideElement paymentButton = $$(".button").find(exactText("Купить"));
-    private SelenideElement creditButton = $$(".button").find(exactText("Купить в кредит"));
+    private static final SelenideElement paymentButton = $$(".button").find(exactText("Купить"));
+    private static final SelenideElement creditButton = $$(".button").find(exactText("Купить в кредит"));
+    private final SelenideElement headingStart = $("h2.heading");
 
     public StartPage() {
         headingStart.shouldBe(visible);
     }
 
-    public PaymentPage payment() {
+    public static PaymentPage payment() {
         paymentButton.click();
         return new PaymentPage();
     }
 
-    public CreditPage paymentOnCredit() {
+    public static CreditPage paymentOnCredit() {
         creditButton.click();
         return new CreditPage();
     }

@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Sep 25 12:47:24 MSK 2022","Sun Sep 25 12:47:36 MSK 2022","11738","","test.PaymentTest","","test.PaymentTest","shouldPayWithValidCard","shouldPayWithValidCard()",""
+"failed","Sun Sep 25 12:47:36 MSK 2022","Sun Sep 25 12:47:57 MSK 2022","21360","","test.PaymentTest","","test.PaymentTest","shouldNotPayWithInValidCard","shouldNotPayWithInValidCard()",""
+"failed","Sun Sep 25 12:47:06 MSK 2022","Sun Sep 25 12:47:20 MSK 2022","14956","","test.CreditTest","","test.CreditTest","shouldCreditWithValidCard","shouldCreditWithValidCard()",""
+"passed","Sat Sep 24 19:40:07 MSK 2022","Sat Sep 24 19:40:19 MSK 2022","11485","","test.PaymentTest","","test.PaymentTest","shouldCreditWithValidCard","shouldCreditWithValidCard()",""
+"passed","Sun Sep 25 12:33:29 MSK 2022","Sun Sep 25 12:33:44 MSK 2022","15208","","test.PaymentTest","","test.PaymentTest","shouldNotPayWithRandomCard","shouldNotPayWithRandomCard()",""
+"passed","Sun Sep 25 12:47:21 MSK 2022","Sun Sep 25 12:47:24 MSK 2022","3537","","test.PaymentTest","","test.PaymentTest","shouldGetErrorPayNotificationWithRandomCard","shouldGetErrorPayNotificationWithRandomCard()",""
