@@ -13,8 +13,8 @@ import java.util.Locale;
 
 public class DataHelper {
     // в зависимости от используемой базы данных, раскомментировать нужное значение переменной
-    //final private static String databaseType = "postgresql";
-    final private static String databaseType = "mysql";
+    final private static String databaseType = "postgresql";
+//    final private static String databaseType = "mysql";
     final private static String testDataValidCardNumber = "4444444444444441";
     final private static String testDataInvalidCardNumber = "4444444444444442";
 

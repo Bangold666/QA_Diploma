@@ -31,6 +31,7 @@ public class CreditTest {
         DataHelper.clearSUTData();
     }
 
+    @DisplayName("Покупка тура в кредит по «APPROVED» карте с валидным реквизитами")
     @Test
     void shouldCreditWithValidCard() {
         String[] date = DataHelper.generateDate(30);
@@ -52,6 +53,7 @@ public class CreditTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @DisplayName("Покупка тура в кредит по «DECLINED» карте с валидными реквизитами")
     @Test
     void shouldNotPayWithInValidCard() {
         String[] date = DataHelper.generateDate(30);
@@ -72,6 +74,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Оплата с незарегистрированной картой")
     @Test
     void shouldGetErrorPayNotificationWithRandomCard() {
         String[] date = DataHelper.generateDate(30);
@@ -93,6 +96,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Проверка покупки тура при пустом поле `Номер карты`")
     @Test
     void shouldGetErrorNotificationWithEmptyCardNumber() {
         String[] date = DataHelper.generateDate(30);
@@ -114,6 +118,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Проверка покупки тура при вводе нуля в поле `Номер карты`")
     @Test
     void shouldGetErrorNotificationWithShortCardNumber() {
         String[] date = DataHelper.generateDate(30);
@@ -134,6 +139,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Проверка покупки тура при вводе короткого номера в поле `Номер карты`")
     @Test
     void shouldGetErrorNotificationWithZeroAsCardNumber() {
         String[] date = DataHelper.generateDate(30);
@@ -155,6 +161,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Проверка покупки тура при просроченным поле `Месяц`")
     @Test
     void shouldGetErrorNotificationWithPastValidityPeriod() {
         String[] date = DataHelper.generateDate(-30);
@@ -176,6 +183,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Проверка покупки тура при вводе 00 в поле `Месяц`")
     @Test
     void shouldGetErrorNotificationWithDoubleZeroAsMonth() {
         String[] date = DataHelper.generateDate(30);
@@ -195,6 +203,8 @@ public class CreditTest {
         String actual = DataHelper.getCreditIdFromOrderEntity();
         Assertions.assertNull(actual);
     }
+
+    @DisplayName("Проверка покупки тура при вводе 13 в поле `Год`")
     @Test
     void shouldGetErrorNotificationWithCardExpiredPeriod() {
         String[] date = DataHelper.generateDate(30);
@@ -215,6 +225,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Проверка покупки тура при пустом поле `Месяц`")
     @Test
     void shouldGetErrorNotificationWithEmptyMonth() {
         String[] date = DataHelper.generateDate(30);
@@ -235,6 +246,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Проверка покупки тура при вводе месяца не верного формата в поле `Месяц`")
     @Test
     void shouldGetErrorNotificationWithInvalidFormatMonth() {
         String[] date = DataHelper.generateDate(30);
@@ -255,6 +267,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Проверка покупки тура при не заполнении поля `Год`")
     @Test
     void shouldGetErrorNotificationWithEmptyYear() {
         String[] date = DataHelper.generateDate(30);
@@ -275,6 +288,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Проверка покупки тура при вводе прошлого года в поле `Год`")
     @Test
     void shouldGetErrorNotificationWithPastYear() {
         String[] date = DataHelper.generateDate(-365);
@@ -295,6 +309,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Проверка покупки тура при вводе на 6 лет дальше настоящего года в поле `Год`")
     @Test
     void shouldGetErrorNotificationWithFutureYear() {
         String[] date = DataHelper.generateDate(2190);
@@ -315,6 +330,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Проверка покупки тура при пустом поле `Владелец`")
     @Test
     void shouldGetErrorNotificationWithEmptyOwnerField() {
         String[] date = DataHelper.generateDate(30);
@@ -335,6 +351,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Проверка покупки тура при вводе кириллицы в поле`Владелец`")
     @Test
     void shouldGetErrorNotificationWithCyrillicOwner() {
         String[] date = DataHelper.generateDate(30);
@@ -355,7 +372,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
-
+    @DisplayName("Проверка покупки тура при вводе спецсимволов в поле`Владелец`")
     @Test
     void shouldGetErrorNotificationWithSpecialSymbolAsOwner() {
         String[] date = DataHelper.generateDate(30);
@@ -376,7 +393,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
-
+    @DisplayName("Проверка покупки тура при вводе цифр в поле`Владелец`")
     @Test
     void shouldGetErrorNotificationWithNumbersAsOwner() {
         String[] date = DataHelper.generateDate(30);
@@ -397,6 +414,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Проверка покупки тура при вводе нуля в поле`Владелец`")
     @Test
     void shouldGetErrorNotificationWithZeroAsOwner() {
         String[] date = DataHelper.generateDate(30);
@@ -417,6 +435,7 @@ public class CreditTest {
         Assertions.assertNull(actual);
     }
 
+    @DisplayName("Проверка покупки тура при пустом поле`CVV`")
     @Test
     void shouldGetErrorNotificationWithEmptyCvv() {
         String[] date = DataHelper.generateDate(30);
@@ -436,6 +455,8 @@ public class CreditTest {
         String actual = DataHelper.getCreditIdFromOrderEntity();
         Assertions.assertNull(actual);
     }
+
+    @DisplayName("Проверка покупки тура при вводе одной цифры в поле`CVV`")
     @Test
     void shouldGetErrorNotificationWithOneAsCvv() {
         String[] date = DataHelper.generateDate(30);
@@ -455,6 +476,8 @@ public class CreditTest {
         String actual = DataHelper.getCreditIdFromOrderEntity();
         Assertions.assertNull(actual);
     }
+
+    @DisplayName("Проверка покупки тура при вводе нуля в поле`CVV`")
     @Test
     void shouldGetErrorNotificationWithZeroAsCvv() {
         String[] date = DataHelper.generateDate(30);
@@ -474,6 +497,8 @@ public class CreditTest {
         String actual = DataHelper.getCreditIdFromOrderEntity();
         Assertions.assertNull(actual);
     }
+
+    @DisplayName("Проверка покупки тура при вводе двух цифр в поле`CVV`")
     @Test
     void shouldGetErrorNotificationWithTwoDigitAsCvv() {
         String[] date = DataHelper.generateDate(30);

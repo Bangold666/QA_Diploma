@@ -1,5 +1,6 @@
 package netology.ru.Page;
 
+import com.codeborne.selenide.Condition;
 import netology.ru.Data.DataHelper;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.SelenideElement;
@@ -52,12 +53,12 @@ public class CreditPage {
 
     public void successfulPaymentCreditCard() {
         $(".notification_status_ok")
-                .shouldHave(text("Успешно Операция одобрена Банком."), Duration.ofSeconds(15)).shouldBe(visible);
+                .shouldBe(Condition.visible, Duration.ofSeconds(20));
     }
 
     public void invalidPaymentCreditCard() {
         $(".notification_status_error")
-                .shouldBe(visible).shouldHave(text("Ошибка Ошибка! Банк отказал в проведении операции."), Duration.ofSeconds(15));
+                .shouldBe(Condition.visible, Duration.ofSeconds(20));
     }
 
     public void checkInvalidFormat() {
