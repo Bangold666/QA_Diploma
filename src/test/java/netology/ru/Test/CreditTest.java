@@ -1,9 +1,9 @@
 package netology.ru.Test;
 
-import netology.ru.Data.DataHelper;
-import netology.ru.Page.StartPage;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+import netology.ru.Data.DataHelper;
+import netology.ru.Page.StartPage;
 import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -106,7 +106,7 @@ public class CreditTest {
                 cvv = "123",
                 EmptyCardNumber = "";
 
-        var cardInfo = DataHelper.setCard(EmptyCardNumber,month, year, owner, cvv);
+        var cardInfo = DataHelper.setCard(EmptyCardNumber, month, year, owner, cvv);
         var paymentPage = StartPage.paymentOnCredit();
 
         paymentPage.cleanAllFields();
@@ -127,7 +127,7 @@ public class CreditTest {
                 owner = DataHelper.generateOwner("En"),
                 cvv = "123",
                 shortCardNumber = "4444 4444 4444";
-        var cardInfo = DataHelper.setCard(shortCardNumber,month, year, owner, cvv);
+        var cardInfo = DataHelper.setCard(shortCardNumber, month, year, owner, cvv);
         var paymentPage = StartPage.paymentOnCredit();
 
         paymentPage.cleanAllFields();
@@ -149,7 +149,7 @@ public class CreditTest {
                 cvv = "123",
                 zeroCardNumber = "0";
 
-        var cardInfo = DataHelper.setCard(zeroCardNumber,month, year, owner, cvv);
+        var cardInfo = DataHelper.setCard(zeroCardNumber, month, year, owner, cvv);
         var paymentPage = StartPage.paymentOnCredit();
 
         paymentPage.cleanAllFields();
@@ -169,9 +169,9 @@ public class CreditTest {
                 year = date[2],
                 owner = DataHelper.generateOwner("En"),
                 cvv = "123",
-                cardNumber= "4444 4444 4444 4441";
+                cardNumber = "4444 4444 4444 4441";
 
-        var cardInfo = DataHelper.setCard(cardNumber,month, year, owner, cvv);
+        var cardInfo = DataHelper.setCard(cardNumber, month, year, owner, cvv);
         var paymentPage = StartPage.paymentOnCredit();
 
         paymentPage.cleanAllFields();

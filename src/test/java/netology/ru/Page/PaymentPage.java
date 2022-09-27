@@ -1,9 +1,9 @@
 package netology.ru.Page;
 
-import netology.ru.Data.DataHelper;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import netology.ru.Data.DataHelper;
 import org.openqa.selenium.Keys;
 
 import java.time.Duration;
