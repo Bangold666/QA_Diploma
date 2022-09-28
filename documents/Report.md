@@ -9,13 +9,13 @@
 # Количество тест-кейсов 
 ***
 Всего выполнено 46 автоматизированных тест-кейсов.
-![img.png](allure-reports/allure overview.png)
+![image](https://user-images.githubusercontent.com/74143779/192843091-e271f6d6-a63d-4d98-9269-751d0e9f9367.png)
 ***
 # Процент успешных/не успешных тест кейсов
 Из 46 тест кейсов у нас:
 * 33 успешных – что составляет 72 %
 * 13 не успешных - что составляет 28 %
-![img_1.png](allure-reports/allure report page graphs.png)
+![image](https://user-images.githubusercontent.com/74143779/192843205-f668cccf-ebd9-43cb-a09a-5c9ab84f5737.png)
 
 ***
 # Общие рекомендации
